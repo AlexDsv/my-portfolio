@@ -1,0 +1,10 @@
+.sections-container {
+    display: flex;
+    will-change: transform;
+  }
+  
+  .section {
+    min-width: 100vw;
+    min-height: 100vh;
+  }
+  

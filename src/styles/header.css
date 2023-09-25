@@ -1,0 +1,17 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: transparent;
+    font-size: 34px;
+    color: white;
+}
+
+.header button{
+    font-size: 34px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    color: white;
+}
