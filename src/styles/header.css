@@ -1,17 +1,65 @@
-.header{
+.header {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    background-color: transparent;
     font-size: 34px;
     color: white;
+    position: fixed;
+    top: 2vw;
+    right: 2vw;
+    z-index: 1000;
 }
 
-.header button{
-    font-size: 34px;
+#menuToggle {
+    display: none;
+}
+
+.burgerIcon {
+    display: none;
+    cursor: pointer;
+}
+
+.burgerIcon .close-icon {
+    display: none;
+}
+
+#menuToggle:checked + .burgerIcon .menu-icon {
+    display: none;
+}
+
+#menuToggle:checked + .burgerIcon .close-icon {
+    display: block;
+}
+
+.header button {
+    font-size: 32px;
     text-decoration: none;
     border: none;
     cursor: pointer;
     background: transparent;
     color: white;
+    transition: all 200ms;
+}
+
+.header button:hover {
+    transition: all 200ms;
+    transform: scale(1.1);
+    color: #37A3BE;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+}
+
+.navLinks {
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        display: none;
+    }
 }

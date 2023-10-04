@@ -1,7 +1,64 @@
 .home {
     color: white;
-    height: 100vh;
-    width: auto;
+    width: 100%;
+}
 
-  }
+.leftSection{
+    background: #222126;
+    width: 44vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 6.2vw;
+    padding-right: 1vw;
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.4); 
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.4);
+}
+
+.leftSection h2, .leftSection h1, .leftSection p{
+    margin: 0;
+}
+
+.leftSection h1{
+    font-size: 70px;
+    margin-bottom: 28px;
+}
+
+.leftSection h2{
+    font-size: 48px;
+    margin-bottom: 7px;
+}
+
+.leftSection p{
+    font-size: 28px;
+}
+
+.leftSection span{
+    color: #37A3BE;
+}
   
+
+/* Tablets and below */
+@media screen and (max-width: 768px) {
+    .home {
+      flex-direction: column;
+      display: flex;
+      z-index: 10000;
+    }
+    .leftSection{
+        width: auto;
+        height: auto;
+        padding: 20px 20px 30px 20px;
+        border-radius: 0 0 5px 5px;
+    }
+    .leftSection h1{
+        font-size: 50px;
+    }
+    .leftSection h2{
+        font-size: 36px;
+    }
+    .leftSection p{
+        font-size: 20px;
+    }
+  }

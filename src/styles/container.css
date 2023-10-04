@@ -1,10 +1,41 @@
 .sections-container {
+   display: flex;
+   width: 400%;
+   height: 100%;
+   will-change: transform;
+  }
+
+  .section{
+    width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
+  }
+  .container{
     display: flex;
-    will-change: transform;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
   }
-  
-  .section {
-    min-width: 100vw;
-    min-height: 100vh;
+
+
+/* Tablets and below */
+@media screen and (max-width: 768px) {
+  .sections-container{
+    display: inline;
+    width: 100%;
+    height: auto;
   }
-  
+  .container{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    position: static;
+    overflow: visible;
+  }
+  .section{
+    width: auto;
+    height: auto;
+  }
+}

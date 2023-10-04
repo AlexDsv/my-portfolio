@@ -1,0 +1,242 @@
+.projects{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  padding-left: 7vw;
+  padding-top: 17vh;
+  gap: 1.5vw;
+  
+}
+
+.projectCard{
+    background-image: url(../assets/p1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 64vw;
+    height: 70vh;
+    border-radius: 10px;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.projectCardWrapper{
+    overflow: hidden;
+    height: 70vh;
+}
+
+.projectCardContent {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+.projectCardBlur{
+    background: rgba(255, 255, 255, 0.23);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.7px);
+    -webkit-backdrop-filter: blur(2.7px);
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+}
+
+.projectIcon{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: all 1.5s;
+}
+  
+.projectInfo {
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0));
+    color: white;
+    height: 50%;
+    padding-left: 3%;
+    padding-bottom: 2%;
+    transform: translateY(100%);
+    transition: all 1s;
+    border-radius: 9.2px;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .projectInfoContent{
+    display: flex;
+  }
+
+  .projectDescription{
+    width: 70%;
+  }
+
+  .projectDescription{
+    font-size: 18px;
+  }
+  .projectTechnologies{
+    display: flex;
+    width: 30%;
+    font-size: 16px;
+
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+  }
+
+  .projectTechnology i{
+    font-size: 38px;
+  }
+  .projectTechnology p{
+    margin: 0;
+  }
+
+
+
+  .projectTechnology{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+  }
+  .projectCard:hover .projectCardBlur, .projectCard:hover .projectIcon {
+    transform: translateY(-100%);
+    transition: all 1.5s;
+}
+  .projectCard:hover .projectInfo {
+    transform: translateY(0);
+  }
+
+.navButton {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    transform: translateY(-50%);
+    z-index: 10;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6vh;
+    height: 6vh;
+    background-color: #222126;
+    border-radius: 50%;
+    transition: all 200ms;
+}
+
+.navButton .i{
+    color: white;
+    padding: 10px;
+}
+
+.navButton:hover{
+    transition: all 200ms;
+    transform: scale(1.2) translateY(-50%);
+}
+  
+.prevButton{
+    top: 50%;
+    left: 3%;
+}
+
+.nextButton{
+    top: 50%;
+    right: 3%;
+}
+  
+.nextProjectPreview {
+    width: 26vw; 
+    height: 29vh; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.dot-indicator {
+    display: flex;
+    gap: 10px;
+}
+  
+.dot {
+    width: 1vw;
+    height: 1vw;
+    border-radius: 50%;
+    background-color: #222126;
+}
+  
+.dot.active {
+    background-color: white;
+}
+
+.rightCarouselSection{
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+/* Tablets and below */
+@media screen and (max-width: 768px) {
+    .projects{
+        width: auto;
+        flex-direction: column;
+        display: inline;
+        padding: 0;
+    }
+
+    .projectCardWrapper{
+        display: flex;
+        justify-content: center;
+        padding: 30px 0px 30px 0px;
+        background-color: #222126;
+        height: auto;
+    }
+    .nextProjectPreview{
+      display: none;
+    }
+
+    .projectCardBlur{
+        display: none;
+    }
+    .projectCard{
+        width: 90%;
+        height: 50vh;
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.4); 
+        box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.4);
+    }
+    .dot-indicator{
+        justify-content: center;
+        background: #222126;
+    }
+    .dot{
+      border: 1px solid white;
+        width: 3vw;
+        height: 3vw;
+    }
+    .projectInfo{
+        transform: translateY(0%);
+        position: relative;
+        top: auto;
+        bottom: auto;
+        height: auto;
+        padding: 20px;
+        background: #222126;
+        border-radius: 0;
+    }
+    .rightCarouselSection{
+      padding-bottom: 30px;
+      background: #222126;
+    }
+  }

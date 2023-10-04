@@ -4,7 +4,10 @@ import "../styles/pageNavigator.css";
 
 const PageNavigator = ({ currentPage }) => (
   <div className="page-navigator">
-    <span>Page: {currentPage}</span>
+    <p>
+      <span>0{currentPage}</span>
+      /04
+    </p>
   </div>
 );
 

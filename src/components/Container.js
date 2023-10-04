@@ -7,13 +7,15 @@ import About from "./About";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import "../styles/container.css";
+import SocialsSideBar from "./SocialsSideBar";
 
 const pages = [<Home />, <About />, <Projects />, <Contact />];
 
 const Container = () => {
-  const [currentSection, setCurrentSection] = useState(1);
+  const [currentSection, setCurrentSection] = useState(0);
+
   const props = useSpring({
-    transform: `translateX(${-currentSection * 100}%)`,
+    transform: `translateX(${-currentSection * 25}%)`,
     config: { tension: 220, friction: 120 },
   });
 
@@ -42,11 +44,15 @@ const Container = () => {
 
   return (
     <div className="container">
-      <Header goToSection={goToSection} />
+      <Header goToSection={goToSection} currentSection={currentSection} />
+      <SocialsSideBar
+        goToSection={goToSection}
+        currentSection={currentSection}
+      />
       <PageNavigator currentPage={currentSection + 1} />
       <animated.div className="sections-container" style={props}>
         {pages.map((page, index) => (
-          <div className="section" key={index} style={{ width: "100vw" }}>
+          <div className="section" key={index}>
             {page}
           </div>
         ))}
